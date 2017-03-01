@@ -421,3 +421,88 @@ Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-31 14:38:13 -0600
+
+
+Started GET "/" for ::1 at 2017-03-01 10:41:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/robinabrams/.rvm/gems/ruby-2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (5.2ms)
+Completed 200 OK in 46ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-03-01 10:41:20 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (2.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1672ms (Views: 1635.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-03-01 10:41:32 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1/edit" for ::1 at 2017-03-01 10:41:34 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2017-03-01 10:43:43 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9eb7rA477uVK39Vedlk8NZIX4kIJ1Qm/HAkBNQTFNZVKW05oEoYduHjD5Lw6Lun2ts0Pb6y40SQxbp4LHje5Kg==", "title"=>"Rails Introduction Quiz", "description"=>"asdfasdf\r\nhi how are you", "commit"=>"Submit Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Rails Introduction Quiz"], ["description", "asdfasdf\r\nhi how are you"], ["created_at", "2017-03-01 15:43:43.235367"], ["updated_at", "2017-03-01 15:43:43.235367"]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 24ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/posts/3" for ::1 at 2017-03-01 10:43:43 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for ::1 at 2017-03-01 10:45:01 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9eb7rA477uVK39Vedlk8NZIX4kIJ1Qm/HAkBNQTFNZVKW05oEoYduHjD5Lw6Lun2ts0Pb6y40SQxbp4LHje5Kg==", "title"=>"Rails Introduction Quiz", "description"=>"asdfasdf\r\nhi how are you today", "commit"=>"Submit Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Rails Introduction Quiz"], ["description", "asdfasdf\r\nhi how are you today"], ["created_at", "2017-03-01 15:45:01.313776"], ["updated_at", "2017-03-01 15:45:01.313776"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/4
+Completed 302 Found in 15ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/posts/4" for ::1 at 2017-03-01 10:45:01 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for ::1 at 2017-03-01 10:45:08 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9eb7rA477uVK39Vedlk8NZIX4kIJ1Qm/HAkBNQTFNZVKW05oEoYduHjD5Lw6Lun2ts0Pb6y40SQxbp4LHje5Kg==", "title"=>"Rails Introduction Quiz", "description"=>"asdfasdf\r\nhi how are you today", "commit"=>"Submit Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Rails Introduction Quiz"], ["description", "asdfasdf\r\nhi how are you today"], ["created_at", "2017-03-01 15:45:08.051206"], ["updated_at", "2017-03-01 15:45:08.051206"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 12ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/posts/5" for ::1 at 2017-03-01 10:45:08 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.2ms)
